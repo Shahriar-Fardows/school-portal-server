@@ -1,6 +1,10 @@
-const { router } = require("./app/routes");
-const express = require("express");
-const cors = require("cors");
+// const { router } = require("./app/routes");
+// const express = require("express");
+// const cors = require("cors");
+import express from "express";
+import cors from "cors";
+import router from "./app/routes/index.js";
+
 const app = express();
 
 // parsers
@@ -14,4 +18,4 @@ app.get("/", (req, res) => {
   res.send("SCHOOL POSTAL server is running");
 });
 
-module.exports = app;
+export default app;

@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
-const { config } = require("./app/config");
-const { default: app } = require("./app");
+// const mongoose = require("mongoose");
+import mongoose from "mongoose";
+import app from "./app.js";
+import config from "./app/config/index.js";
 
 let server;
 

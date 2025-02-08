@@ -1,5 +1,4 @@
-const dotenv = require("dotenv");
-
+import dotenv from "dotenv";
 dotenv.config();
 
 const config = {
@@ -16,4 +15,4 @@ const config = {
   cloudinary_api_secret: process.env.CLOUDINARY_API_SECRET,
 };
 
-module.exports = config;
+export default config;

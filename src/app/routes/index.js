@@ -1,8 +1,10 @@
-const express = require("express");
+import express from "express";
+import { AnnouncementRouter } from "../module/Anousment/anousment.routes.js";
+// import AnnouncementRouter from "../module/Anousment/anousment.routes.js";
 const router = express.Router();
 
-const moduleRoutes = [{}];
+const moduleRoutes = [{ path: "/announcement", route: AnnouncementRouter }];
 
 moduleRoutes.forEach((el) => router.use(el.path, el.route));
 
-module.exports = router;
+export default router;
