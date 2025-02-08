@@ -5,6 +5,11 @@ const insertAnnounsmentOnDB = async (payloade) => {
   return result;
 };
 
+const getAnnounsmentFromDB = async () => {
+  const result = await Announcement.find();
+  return result;
+};
 export const AnnouncementService = {
   insertAnnounsmentOnDB,
+  getAnnounsmentFromDB,
 };
