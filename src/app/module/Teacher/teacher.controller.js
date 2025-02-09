@@ -16,6 +16,18 @@ const addNewTeacher = catchAsync(async (req, res) => {
   });
 });
 
+const getAllTeachers = catchAsync(async (req, res) => {
+  const teachers = await TeachreServices.getAllTeacherFromDB();
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Teachers data provided successfully",
+    data: teachers,
+  });
+});
+
 export const TeacherController = {
   addNewTeacher,
+  getAllTeachers,
 };

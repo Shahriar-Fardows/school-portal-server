@@ -5,6 +5,11 @@ const addNewTeacherOnDB = async (payloade) => {
   return result;
 };
 
+const getAllTeacherFromDB = async () => {
+  const teachers = await Teacher.find();
+  return teachers;
+};
 export const TeachreServices = {
   addNewTeacherOnDB,
+  getAllTeacherFromDB,
 };
